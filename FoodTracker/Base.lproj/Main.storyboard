@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-l9-Pub">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="105" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-l9-Pub">
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-Vx-g8K">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,37 +34,21 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIn-jw-Xkd">
                                         <state key="normal" title="Set Defualt Label Text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Haa-Vu-mrN"/>
-                                        </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Wum-uX-bIW">
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Wum-uX-bIW" secondAttribute="height" multiplier="1:1" id="20y-BM-5vZ"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ft6-da-Zag"/>
-                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="IWX-3Y-FBW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qcw-l9-Pub" secondAttribute="trailing" id="ctg-8G-KyT"/>
+                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="51M-E4-q6U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qcw-l9-Pub" secondAttribute="trailing" id="Q0T-Ud-ZIv"/>
+                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tgk-8f-vPI"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="mealNameLabel" destination="Dp5-Vx-g8K" id="o2A-2O-Nz3"/>
-                        <outlet property="photoImageView" destination="Wum-uX-bIW" id="kBY-Nd-ByL"/>
-                        <outlet property="setDefaultLabelText" destination="zIn-jw-Xkd" id="w4s-mG-rt7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="defaultPhoto" width="540" height="540"/>
-    </resources>
 </document>
