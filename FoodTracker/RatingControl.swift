@@ -9,6 +9,7 @@
 import UIKit
 
 class RatingControl: UIView {
+    
     // MARK: Properties
     var rating = 0 {
         didSet {
@@ -46,7 +47,6 @@ class RatingControl: UIView {
         }
     }
     override func layoutSubviews() {
-        
         // My code differs because using the code shown makesthe width and height 1000
         var buttonFrame = CGRect(x: 0, y: 0, width: 44, height: 44)
         
@@ -56,6 +56,7 @@ class RatingControl: UIView {
         }
         updatedButtonSelectionStates()
     }
+    
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
         rating = ratingButtons.index(of: button)! + 1
