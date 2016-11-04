@@ -19,8 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="105" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-l9-Pub">
-                                <frame key="frameInset" minX="16" minY="80" width="343" height="106"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="105" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-l9-Pub">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-Vx-g8K">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,6 +48,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Qcw-l9-Pub" secondAttribute="trailing" id="hMD-1F-iGb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameMealLabel" destination="Dp5-Vx-g8K" id="tzb-9X-aER"/>
+                        <outlet property="nameTextField" destination="Ivd-Hl-wUg" id="nX2-Yh-6TK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
