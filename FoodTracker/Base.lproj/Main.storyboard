@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="105" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-l9-Pub">
-                                <frame key="frameInset" minX="16" minY="80" width="343" height="105"/>
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-Vx-g8K">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-Hl-wUg">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-Hl-wUg">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -36,13 +36,17 @@
                                         <state key="normal" title="Set Defualt Label Text"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ivd-Hl-wUg" secondAttribute="trailing" id="iTX-Ts-71M"/>
+                                    <constraint firstItem="Ivd-Hl-wUg" firstAttribute="leading" secondItem="Qcw-l9-Pub" secondAttribute="leading" id="jpu-a9-1qc"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="51M-E4-q6U"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qcw-l9-Pub" secondAttribute="trailing" id="Q0T-Ud-ZIv"/>
-                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tgk-8f-vPI"/>
+                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="NaU-Oc-SgZ"/>
+                            <constraint firstItem="Qcw-l9-Pub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gan-bW-wJk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qcw-l9-Pub" secondAttribute="trailing" id="hMD-1F-iGb"/>
                         </constraints>
                     </view>
                 </viewController>
