@@ -47,6 +47,9 @@
                                             <outletCollection property="gestureRecognizers" destination="wUF-yR-C1z" appends="YES" id="Cb1-gi-365"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="yD4-vL-xSr" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Ivd-Hl-wUg" secondAttribute="trailing" id="iTX-Ts-71M"/>
