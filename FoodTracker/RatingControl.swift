@@ -32,6 +32,13 @@ class RatingControl: UIView {
             return CGSize(width: 240, height: 44)
         }
     }
+    override func layoutSubviews() {
+        var buttonFrame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        for (index, button) in ratingButtons.enumerated(){
+            buttonFrame.origin.x = CGFloat(index * (44 + 5))
+            button.frame = buttonFrame
+        }
+    }
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
         print("Button Pressed")
