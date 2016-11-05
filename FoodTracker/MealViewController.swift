@@ -61,6 +61,9 @@ class MealViewController: UIViewController, UITextFieldDelegate,UIImagePickerCon
         dismiss(animated: true, completion: nil)
     }
     // MARK: Navigation
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let senderObject = sender as AnyObject? {
