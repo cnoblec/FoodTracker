@@ -48,7 +48,19 @@ class MealViewController: UIViewController, UITextFieldDelegate,UIImagePickerCon
         
         dismiss(animated: true, completion: nil)
     }
+    // MARK: Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let senderObject = sender as AnyObject? {
+            if saveButton === senderObject {
+                let name = nameTextField.text ?? ""
+                let photo = photoImageView.image
+                let rating = ratingControl.rating
+                meal = Meal(name: name, photo: photo, rating: rating)
+                
+            }
+        }
+    }
     // MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         //Hide Keyboard
