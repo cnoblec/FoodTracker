@@ -106,6 +106,7 @@ class mealTableViewController: UITableViewController {
             let mealDetailViewController = segue.destination as! MealViewController
             
             if let selectedMealCell = sender as? MealTableViewCell {
+                
                 if let indexPath = tableView.indexPath(for: selectedMealCell) {
                     let selectedMeal = meals[indexPath.row]
                     mealDetailViewController.meal = selectedMeal
@@ -118,10 +119,14 @@ class mealTableViewController: UITableViewController {
     
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
-            //Add new meal
-            let newIndexPath = IndexPath(row: meals.count, section: 0)
-            meals.append(meal)
-            tableView.insertRows(at: [newIndexPath], with: .bottom)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                meals[selectedIndexPath.row] = meal
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                let newIndexPath = IndexPath(row: meals.count, section: 0)
+                meals.append(meal)
+                tableView.insertRows(at: [newIndexPath], with: .bottom)
+            }
         }
     }
 }
