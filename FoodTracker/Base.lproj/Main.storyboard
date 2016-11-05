@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahD-IE-4b2" id="DOT-Ja-yM1">
-                                    <frame key="frameInset" width="375" height="89"/>
+                                    <frame key="frameInset" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-8z-5XN">
@@ -46,6 +46,7 @@
                                     <outlet property="nameLabel" destination="dxq-QX-YA8" id="XFi-fd-s9k"/>
                                     <outlet property="photoImageView" destination="6bm-8z-5XN" id="faa-fs-tzL"/>
                                     <outlet property="ratingControl" destination="SoS-tF-ffN" id="cXJ-9f-nyl"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="SdT-gp-5hr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,10 +175,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUo-D6-weN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="812" y="484"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SdT-gp-5hr"/>
+    </inferredMetricsTieBreakers>
 </document>
