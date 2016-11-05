@@ -47,8 +47,9 @@ class RatingControl: UIView {
         }
     }
     override func layoutSubviews() {
-        // My code differs because using the code shown makesthe width and height 1000
-        var buttonFrame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        // My code differs because using the code shown makes the width and height 1000
+        let buttonSize = Int(frame.size.height)
+        var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
         for (index, button) in ratingButtons.enumerated(){
             buttonFrame.origin.x = CGFloat(index * (44 + spacing))
