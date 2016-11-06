@@ -15,6 +15,8 @@ class mealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = editButtonItem
+        
         loadSampleMeals()
     }
     
@@ -112,7 +114,7 @@ class mealTableViewController: UITableViewController {
                     mealDetailViewController.meal = selectedMeal
                 }
             }
-        } else if segue.identifier == "AddItem"{
+        } else if segue.identifier == "AddItem" {
             print("Adding a new meal")
         }
     }
