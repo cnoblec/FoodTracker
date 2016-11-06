@@ -44,7 +44,7 @@ class Meal: NSObject, NSCoding {
         
         let photo = aDecoder.decodeObject(forKey: PropertyKey.photoKey) as? UIImage
         
-        let rating = aDecoder.decodeObject(forKey: PropertyKey.ratingKey) as! Int
+        let rating = aDecoder.decodeInteger(forKey: PropertyKey.ratingKey)
         
         self.init(name: name, photo: photo, rating: rating)
     }

@@ -17,7 +17,12 @@ class mealTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = editButtonItem
         
-        loadSampleMeals()
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        } else {
+            
+            loadSampleMeals()
+        }
     }
     
     func loadSampleMeals() {
@@ -48,7 +53,6 @@ class mealTableViewController: UITableViewController {
         return meals.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "MealTableViewCell"
         
@@ -63,7 +67,6 @@ class mealTableViewController: UITableViewController {
         return cell
     }
     
-    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -71,7 +74,6 @@ class mealTableViewController: UITableViewController {
      return true
      }
      */
-    
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -112,6 +114,7 @@ class mealTableViewController: UITableViewController {
                 
                 if let indexPath = tableView.indexPath(for: selectedMealCell) {
                     let selectedMeal = meals[indexPath.row]
+                    saveMeals()
                     mealDetailViewController.meal = selectedMeal
                 }
             }
@@ -130,6 +133,8 @@ class mealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
+            // Save the meals
+            saveMeals()
         }
     }
     //MARK: NSCoding
