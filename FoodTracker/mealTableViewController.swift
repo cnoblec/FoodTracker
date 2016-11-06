@@ -139,4 +139,7 @@ class mealTableViewController: UITableViewController {
             print("Failed to save meals...")
         }
     }
+    func loadMeals() -> [Meal]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]
+    }
 }
